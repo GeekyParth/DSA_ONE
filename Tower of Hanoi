@@ -1,0 +1,25 @@
+public class Tower_of_Hanoi {
+	
+	public static void TowerofHanoi(int n , String src, String help , String dest) {
+		
+		if(n==1) {
+			System.out.println("Move disk " + n + " "+ src + " to "+ dest);
+			return;
+		}
+		
+		TowerofHanoi(n-1, src ,dest,help);
+		System.out.println("Move disk " + n +" "+ src + " to "+ dest);
+		TowerofHanoi(n-1,help,src,dest); /* according to noted pattern in case of n=2 & n=3*/
+		
+	}
+
+	public static void main(String[] args) {
+	
+		int n = 5;
+		
+		TowerofHanoi(n, "source"," helper" , "destination");
+		
+
+	}
+
+}
