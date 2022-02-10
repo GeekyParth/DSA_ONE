@@ -1,0 +1,18 @@
+public class Print_1_to_n {
+	static void fun(int n){
+        for(int i=0; i==n ;i++){
+            return;
+        }
+        fun(n-1);
+        System.out.print(n + " ");
+        
+    }
+    public static void main(String args[]) {
+     System.out.print("Enter Your Number : ");
+     Scanner sc = new Scanner(System.in);
+     int n = sc.nextInt();
+     fun(n);
+     
+    
+    }
+}
